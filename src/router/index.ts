@@ -1,9 +1,8 @@
-import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import PrivateLayout from '@/components/layout/PrivateLayout.vue'
 import HomeView from "../views/HomeView.vue"
 import PostsView from "@/components/posts/PostsView.vue"
-import NewPostView from "@/components/posts/CreatePost.vue"
-const routes: Array<RouteRecordRaw> = [
+const routes = [
   {
     path: '/',
     component: PrivateLayout,
@@ -18,11 +17,6 @@ const routes: Array<RouteRecordRaw> = [
         name: 'posts',
         component: PostsView
       },
-      {
-        path: 'posts/create',
-        name: 'create-post',
-        component: NewPostView
-      }
     ]
   }
 ]
